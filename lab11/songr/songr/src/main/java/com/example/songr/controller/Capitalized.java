@@ -11,7 +11,7 @@ public class Capitalized {
     public String Capitalized (@PathVariable String upperCase , Model newModel  ){
         String newUpperCase = upperCase.toUpperCase();
         newModel.addAttribute("capitalizedText" , newUpperCase);
-        return "capitalized.html";
+        return "Capitalize.html";
 
     }
 }

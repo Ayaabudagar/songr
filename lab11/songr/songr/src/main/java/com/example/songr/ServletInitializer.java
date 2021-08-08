@@ -1,4 +1,4 @@
-package com.example.songr.controller;
+package com.example.songr;
 
 import com.example.songr.SongrApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
