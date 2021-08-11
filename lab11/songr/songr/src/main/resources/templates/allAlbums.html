@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Albums</title>
+</head>
+<body>
+<div>
+    <form action="#" th:action="@{/newAlbums}" th:object="${newAlbums}" method="post">
+
+        <p>title: <input type="text" field="*{title}" name="title" /></p>
+
+        <p>artist: <input type="text" field="*{artist}" name="artist" /></p>
+
+        <p>songCount: <input type="number" min="1" field="*{songCount}" name="songCount" /></p>
+
+        <p>imageUrl: <input type="text" field="*{imgUrl}" name="imgUrl" /></p>
+
+
+        <p>length: <input type="number" field="*{length}" name="length" /></p>
+
+        <p>Submit <input type="submit" value="Submit" /></p>
+
+    </form>
+</div>
+<div th:each="album  : ${albums}" >
+    <p>Album title :<span th:text="${album.title}"></span></p>
+    <p>Artist Name :<span th:text="${album.artist}"></span></p>
+    <p>Total length :<span th:text="${album.length}"></span></p>
+    <img th:src="${album.imgUrl}" />
+    <p>Number of songs :<span th:text="${album.songCount}"></span></p>
+
+
+</div>
+
+</body>
+</html>
