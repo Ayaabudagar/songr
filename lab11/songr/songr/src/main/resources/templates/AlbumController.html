@@ -18,6 +18,24 @@
 
 
     </div>
+    <div>
+    <form action="#" th:action="@{/newAlbums}" th:object="${newAlbums}" method="post">
+
+        <p>title: <input type="text" field="*{title}" name="title" /></p>
+
+        <p>artist: <input type="text" field="*{artist}" name="artist" /></p>
+
+        <p>songCount: <input type="number" min="1" field="*{songCount}" name="songCount" /></p>
+
+        <p>imageUrl: <input type="text" field="*{imgUrl}" name="imgUrl" /></p>
+
+
+        <p>length: <input type="number" field="*{length}" name="length" /></p>
+
+        <p>Submit <input type="submit" value="Submit" /></p>
+
+    </form>
+    </div>
 </main>
 </body>
 

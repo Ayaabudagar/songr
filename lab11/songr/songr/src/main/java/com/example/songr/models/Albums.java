@@ -9,7 +9,7 @@ public class Albums {
     private int length;
     private String imgUrl;
     private int songCount;
-    int id;
+    private int id;
     public Albums(){
 
     }
@@ -24,7 +24,13 @@ public class Albums {
 
     public Albums(String title, String artist, String length, String imgUrl, String songCount) {
     }
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getTitle() {
             return title;
         }
